@@ -1,12 +1,11 @@
 <script setup>
-
+import HeaderComponent from "./components/Header.vue";
 </script>
 
 <template>
-
   <main>
-        <router-view />
-
+    <HeaderComponent v-if="!$route.meta.hideHeader" />
+    <router-view />
   </main>
 </template>
 
